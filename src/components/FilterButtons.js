@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import '../App.css';
 
 class FilterButtons extends Component {
 
@@ -14,9 +13,7 @@ class FilterButtons extends Component {
             
             for (let x = 0; x < divs.length; x++) 
             {
-                const div = divs[x];
-                const content = div.textContent.trim();
-              
+                const div = divs[x];              
 
                 if (div.textContent.indexOf(position) <= 0){
                     div.style.display = "none";
@@ -41,15 +38,17 @@ class FilterButtons extends Component {
 
         return(
 
-            <div>
+            <div className='buttonContainer'>
+
+                <p style={{display:"inline", color:"#FFFFFF", marginRight: 10}} className="filterText">Filter:</p>
                 
-                <button onClick={() => ShowAll()} className="adminButton">All</button>
-                <button onClick={() => Filter("Admin")}>Admin &amp; PM</button>
-                <button onClick={() => Filter("Communication")}>Communication</button>
-                <button onClick={() => Filter("Design")}>Design</button>
-                <button onClick={() => Filter("Development")}>Development</button>
-                <button onClick={() => Filter("UX")}>UX</button>
-                <button onClick={() => Filter("Video")}>Video</button>
+                <button onClick={() => ShowAll()} className="allButton">All</button>
+                <button onClick={() => Filter("Admin")} className="adminButton">Admin &amp; PM</button>
+                <button onClick={() => Filter("Communication")} className="commButton">Comm</button>
+                <button onClick={() => Filter("Design")} className="designButton">Design</button>
+                <button onClick={() => Filter("Development")} className="devButton">Dev</button>
+                <button onClick={() => Filter("UX")} className="uxButton">UX</button>
+                <button onClick={() => Filter("Video")} className="videoButton">Video</button>
 
             </div>
 

@@ -6,6 +6,7 @@ class Employee extends Component {
 
     var borderStyle = '';
     var pictureLink = '';
+    var teamFiltered = '';
 
     switch(this.props.team) {
         case "Admin &amp; PM":
@@ -26,27 +27,36 @@ class Employee extends Component {
         case "Video":
             borderStyle = {width:200 , height: 200, border:'3px solid #6600AA'};
             break;
+        default:
+            break;
     }
 
-
+    //Handler for if the employee does not have a picture
     if (this.props.image == null){
         pictureLink = require("./Placeholder.png");
     } else {
         pictureLink = this.props.image;
     }
-   
+
+    //Fix & display issue
+    if(this.props.team.includes('&amp;')){
+        teamFiltered = this.props.team.replace('&amp;','&');
+    } else {
+        teamFiltered = this.props.team;
+    }   
 
     return(
 
-        <div key={this.props.id} className="flex-item">   
+        <div key={this.props.id} className="flex-item"> 
+
                 <div>
-                  <img src={pictureLink} style={borderStyle} className="photoBorder"/>
+                  <img src={pictureLink} style={borderStyle} className="profilePicture"/>
                 </div>
                 
                 <div className='employeeText'>
                   <h5 style={{textAlign: 'center', margin: 0, padding:0}}>{this.props.name}</h5>
                 
-                  <p style={{textAlign: 'center', margin: 0, padding:0, fontSize: 15}}>{this.props.team}</p>
+                  <p style={{textAlign: 'center', margin: 0, padding:0, fontSize: 15}}>{teamFiltered + " Team"}</p>
                 </div>
         </div>
 

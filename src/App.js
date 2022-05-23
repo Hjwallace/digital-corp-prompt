@@ -42,10 +42,10 @@ class App extends React.Component {
 
             <header className='headerBar'>
 
-              <div style={{float:"left"}}>
-                <img src={logo}/>
+              <div style={{float:"left", marginLeft:25}} >
+                <img src={logo} alt="Ball State Logo" id="logo"/>
               </div>
-
+              
               <FilterButtons />
 
             </header>
@@ -55,7 +55,7 @@ class App extends React.Component {
 
             {items.map(item => (
 
-              <Employee id={item.id} image={item.image} name={item.name} team={item.team} />
+              <Employee key={item.id} id={item.id} image={item.image} name={item.name} team={item.team} />
               
             ))}
 

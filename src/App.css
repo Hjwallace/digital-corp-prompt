@@ -1,7 +1,8 @@
 .App {
   text-align: center;
+  overflow-x:hidden;
+  
 }
-
 
 .App-header {
   background-color: #ffffff;
@@ -27,7 +28,7 @@
 }
 
 .headerBar {
-  background-color: rgb(60, 62, 65);
+  background-color: #4F4F4F;
   width: 100%;
   margin-bottom: 15px;
   padding: 5px;
@@ -46,25 +47,154 @@
   display: block;
 }
 
-/* Was causing Off Center and overflows
-div {
-  display: flex;
-  flex-wrap: wrap;
+.allButton {
+  box-sizing: border-box;
+
+  width: 91px;
+  height: 51px;
+  left: 435px;
+  top: 42px;
+
+  background: #000000;
+  border: 3px solid #FFFFFF;
+  color:#FFFFFF;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
 }
-*/
 
 .adminButton {
   box-Sizing: border-box;
-  position: absolute;
-  width: "5%";
-  height: 51;
-  left: 568;
-  top: 42;
+  width: 150px;
+  height: 51px;
+  left: 568px;
+  top: 42px;
   background: #FFFFFF;
-  border: "3px solid #CF8D62";
-  color:"#CF8D62";
+  border: 3px solid #CF8D62;
+  color:#CF8D62;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+
+
 }
 
+.commButton {
+  box-sizing: border-box;
+
+  width: 115px;
+  height: 51px;
+  left: 798px;
+  top: 42px;
+
+  background: #FFFFFF;
+  border: 3px solid #A60006;
+  color: #A60006;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.designButton {
+  box-sizing: border-box;
+
+  width: 116px;
+  height: 51px;
+  left: 955px;
+  top: 42px;
+
+  background: #FFFFFF;
+  border: 3px solid #D9CB00;
+  color: #D9CB00;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.devButton {
+  box-sizing: border-box;
+
+  width: 90px;
+  height: 51px;
+  left: 1113px;
+  top: 42px;
+
+  background: #FFFFFF;
+  border: 3px solid #0071DD;
+  color:#0071DD;
+
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.uxButton {
+  box-sizing: border-box;
+
+  width: 80px;
+  height: 51px;
+  left: 1245px;
+  top: 42px;
+
+  background: #FFFFFF;
+  border: 3px solid #15A245;
+  color: #15A245;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.videoButton {
+  box-sizing: border-box;
+
+  width: 97px;
+  height: 51px;
+  left: 1367px;
+  top: 42px;
+
+  background: #FFFFFF;
+  border: 3px solid #6600AA;
+  color: #6600AA;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.buttonContainer {
+  display: inline-block;
+}
+
+.buttonContainer > button {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 @media all and (max-width: 480px)  {
   .flex-item {
@@ -72,10 +202,33 @@ div {
     display: inline-flex;    
   }
 
-  .employeeText {
-    padding-top:25%;
-    padding-left: 5%;
+  #logo {
+    margin-left:20%;
+    padding: 10px;
   }
 
+  .filterText {
+    display: none !important;
+  }
+
+  .buttonContainer > button {
+    display: none;
+  }
+
+  .profilePicture {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .employeeText {
+    padding-top:10%;
+    padding-left: 5%;
+    
+  }
+
+  .employeeText > h5 , p {
+    text-align: left !important;
+    width: auto;
+  }
 }
 
