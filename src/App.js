@@ -2,6 +2,7 @@
 import './App.css';
 import React from 'react';
 import backupPicture from './duck.jpg';
+import Employee from './components/Employee.js';
 
 class App extends React.Component {
 
@@ -26,6 +27,7 @@ class App extends React.Component {
   }
 
   
+  
 
 
   render() 
@@ -41,31 +43,18 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
 
+            <header className='headerBar'>Test</header>
+
 
             <div className="container">
 
             {items.map(item => (
 
-              <div key={item.id} className="flex-item">   
-                <div>
-                  <img src={item.image} onError={(e)=>{e.target.onerror = null; e.target.src={backupPicture}}}  style={{width: 'auto', height: 200}} className="photoBorder"/>
-                </div>
-                
-                <div className='employeeText'>
-                  <h5 style={{textAlign: 'center', margin: 0, padding:0}}>{item.name}</h5>
-                
-                  <p style={{textAlign: 'center', margin: 0, padding:0, fontSize: 15}}>{item.team}</p>
-                </div>
-
-               
-
-              </div>
-
-              ))}
+              <Employee id={item.id} image={item.image} name={item.name} team={item.team} />
+              
+            ))}
 
             </div>
-             
-            <p>Data Has Been Loaded</p>
           </header>
         </div>
       );
