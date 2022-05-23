@@ -28,8 +28,9 @@ class Employee extends Component {
             break;
     }
 
+
     if (this.props.image == null){
-        pictureLink = 'https://www.bsu.edu/-/media/www/departmentalcontent/marketing-communications/logo/cardinalprimary_spot.jpg?h=137&w=100&hash=19E7A4DB783C3EBC880EFF9F5A6C311DD43B74B5&sc_lang=en';
+        pictureLink = require("./Placeholder.png");
     } else {
         pictureLink = this.props.image;
     }

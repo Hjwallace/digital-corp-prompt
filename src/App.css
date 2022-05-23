@@ -5,7 +5,6 @@
 
 .App-header {
   background-color: #ffffff;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +31,12 @@
   width: 100%;
   margin-bottom: 15px;
   padding: 5px;
+  top:0;
+  position: sticky;
+}
+
+.headerBar > div {
+  display: inline;
 }
 
 .flex-item {
@@ -41,15 +46,24 @@
   display: block;
 }
 
-
-
-
 /* Was causing Off Center and overflows
 div {
   display: flex;
   flex-wrap: wrap;
 }
 */
+
+.adminButton {
+  box-Sizing: border-box;
+  position: absolute;
+  width: "5%";
+  height: 51;
+  left: 568;
+  top: 42;
+  background: #FFFFFF;
+  border: "3px solid #CF8D62";
+  color:"#CF8D62";
+}
 
 
 @media all and (max-width: 480px)  {
@@ -63,11 +77,5 @@ div {
     padding-left: 5%;
   }
 
-}
-
-.photoBorder {
-  /* border: 3px solid green; */
-  
-  
 }
 
