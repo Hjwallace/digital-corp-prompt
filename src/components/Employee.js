@@ -56,7 +56,7 @@ class Employee extends Component {
                 <div className='employeeText'>
                   <h5 style={{textAlign: 'center', margin: 0, padding:0}}>{this.props.name}</h5>
                 
-                  <p style={{textAlign: 'center', margin: 0, padding:0, fontSize: 15}}>{teamFiltered + " Team"}</p>
+                  <p style={{textAlign: 'center', margin: 0, padding:0, fontSize: 15}}><i>{teamFiltered + " Team"}</i></p>
                 </div>
         </div>
 

@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://digitalcorps.s3.amazonaws.com/students.json')
+    fetch('https://digitalcorps.s3.amazonaws.com/dev-lead-assessment/students.json')
       .then(res => res.json())
       .then(json => {
         this.setState({
